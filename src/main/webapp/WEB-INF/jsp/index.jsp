@@ -115,11 +115,11 @@ function test () {
     
     var messageList = $("#messages");
 	<c:forEach items="${crypto}" varStatus="item">
-	var chart${item.index} = createChart(${item.current.coinByExchange.coin.id}, ${item.current.coinByExchange.coin.id}, ${item.current.coinByExchange.exchange.id}, "${item.current.coinByExchange.coin.formatedName}");
+	var chart${item.index} = createChart(${item.current.coinByExchange.coin.id}, ${item.current.coinByExchange.exchange.id}, "${item.current.coinByExchange.coin.formatedName}");
     </c:forEach>
 }
 
-function createChart(idContainer, idCrypto, idExchange, name) {
+function createChart(idCrypto, idExchange, name) {
     var groupingUnits = [
         [
             'minute', // unit name
@@ -149,7 +149,7 @@ function createChart(idContainer, idCrypto, idExchange, name) {
 		        }
 		        var options = {
 		           chart: {
-		           		renderTo: 'container'+idContainer,
+		           		renderTo: 'container'+idCrypto,
                    		rangeSelector: {
                        		inputDateFormat: '%d-%m-%Y %H:%M'
                    		},

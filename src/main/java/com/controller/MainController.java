@@ -90,7 +90,7 @@ public class MainController extends PrincipalController {
 				Quotation btcPrice = null;
 				for (Quotation btc : btcList) {
 					if (btcPrice == null && (quotation.getTimestamp().equals(btc.getTimestamp())
-							|| (quotation.getTimestamp().before(btc.getTimestamp()))
+							|| (btcList.indexOf(btc)+1 < btcList.size() && quotation.getTimestamp().before(btc.getTimestamp()))
 							&& quotation.getTimestamp().after(btcList.get(btcList.indexOf(btc)+1).getTimestamp()))) {
 						btcPrice = btc;
 					}
