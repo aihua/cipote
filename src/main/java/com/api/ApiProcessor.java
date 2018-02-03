@@ -76,7 +76,7 @@ public class ApiProcessor {
 		record.setCoinByExchange(reg);
 		record.setSatoshis(price);
 		record.setTimestamp(Utils.getDateWithTimezone());
-		//quotationMapper.insertSelective(record);
+		quotationMapper.insertSelective(record);
 		try {
 			sendSocketMessage(record, crypto);
 		} catch (JsonProcessingException e) {
