@@ -3,7 +3,7 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
-<jsp:include page="header.jsp" />
+<jsp:include page="../header.jsp" />
 
 <script>
 var datatable;
@@ -207,4 +207,4 @@ var datatable;
 		</fieldset>
 		<button type="submit" class="btn btn-primary">Submit</button>
 	</form:form>
-<jsp:include page="footer.jsp" />
+<jsp:include page="../footer.jsp" />
