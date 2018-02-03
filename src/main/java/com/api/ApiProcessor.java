@@ -2,7 +2,6 @@ package com.api;
 
 import java.math.BigDecimal;
 import java.text.MessageFormat;
-import java.util.Date;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -20,6 +19,7 @@ import com.client.QuotationMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.main.CalcSatoshis;
 import com.main.UserOnline;
+import com.main.Utils;
 import com.model.CoinByExchange;
 import com.model.Exchange;
 import com.model.Quotation;
@@ -75,7 +75,7 @@ public class ApiProcessor {
 		reg.setExchange(crypto.getExchange());
 		record.setCoinByExchange(reg);
 		record.setSatoshis(price);
-		record.setTimestamp(new Date());
+		record.setTimestamp(Utils.getDateWithTimezone());
 		//quotationMapper.insertSelective(record);
 		try {
 			sendSocketMessage(record, crypto);

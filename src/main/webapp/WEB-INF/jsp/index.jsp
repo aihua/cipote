@@ -233,8 +233,7 @@ function createChart(idCrypto, idExchange, name) {
                    negativeColor: 'red',
                    color: 'green',
                    name: name,
-                   data: processed_json,
-                   pointStart: new Date().getTime()
+                   data: processed_json
                }]
 	  };
 		    	var chart = new Highcharts.StockChart(options);

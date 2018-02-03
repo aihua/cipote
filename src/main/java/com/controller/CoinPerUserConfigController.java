@@ -50,7 +50,7 @@ public class CoinPerUserConfigController extends PrincipalController {
 	@RequestMapping
 	public String configPerUser(Map<String, Object> model) {
 		model.put("registroEditado", new CoinPerUser());
-		return "coinPerUserConfig";
+		return "configuration/coinPerUserConfig";
 	}
 	
 	
